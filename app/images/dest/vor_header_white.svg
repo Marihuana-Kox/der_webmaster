@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 286.21">
+  <defs>
+    <linearGradient id="_Безымянный_градиент" data-name="Безымянный градиент" x1="-397.37" y1="1330.48" x2="1425.14" y2="-214.69" gradientTransform="translate(0 297.42) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e1cbf3"/>
+      <stop offset="1" stop-color="#ddbbf6"/>
+    </linearGradient>
+  </defs>
+  <path d="m0,0h1920v250.82c-207.24-108.74-380.92-138.48-499.83-145.57-219.95-13.12-422.16,41.14-560.5,78.27-205.66,55.18-276.07,102.98-435.53,102.69-137.46-.24-293.43-25.29-293.43-25.29-53.62-8.62-98.42-18.02-130.71-25.4" style="fill: url(#_Безымянный_градиент);"/>
+</svg>

@@ -1,15 +1,220 @@
+@import clear_css
 @import config
 @import media
+@import fonts
 
-.header 
-	background: url('/images/dest/psychoterapoia.jpg') no-repeat
-	background-size: cover
-	min-height: 400px
 
-h1 
-	color: white
-	font-size: 3em
-	position: relative
-	top: 300px
-	right: -20px
-	text-shadow: 2px 2px 2px gray
+body
+    font-family: 'OpenSans-d', sans-serif
+    font-weight: 500
+
+h1,h2,h3,h4,h5,h6
+    font-family: 'Oswald-d', sans-serif
+    font-weight: 500
+a
+    text-decoration: none
+    color: #99999A
+
+header
+    width: 100%
+    display: block
+    background: url('/images/dest/Header_new.jpg') no-repeat
+    background-position: right 0 bottom 0
+    background-size: cover
+    min-height: 400px
+.row-100
+    width: 100%
+.block-margin-top-100
+    margin-top: 100px
+.block-margin-top-200
+    margin-top: 200px
+.bg-center
+    background: #F2E8FA
+.top-border-bg
+    position: relative
+    top: -170px
+    object-fit: cover
+    overflow: hidden
+    img 
+        width: inherit 
+.top-border-bg-bottom
+    position: relative
+    bottom: -174px
+    object-fit: cover
+    overflow: hidden
+    img 
+        width: inherit 
+        
+.navigation
+    position: sticky
+    top: 0
+    left: 0
+    width: 100%
+    height: 75px
+    z-index: 999
+    background: white
+    box-shadow: 0 0 15px #9210fa
+
+.navi
+    max-width: 1320px
+    margin: 0 auto
+    padding: 10px 0 10px 20px
+    height: 75px
+    img
+        width: 175px
+        height: 55px
+        float: left
+        transition: all .5s ease
+        &:hover
+            width: 180px
+            height: 58px
+nav
+    li
+        display: inline-block
+        float: right
+        margin: 0 40px 0 0
+        font-size: 16px
+        height: 75px
+        margin-top: 20px
+        a
+            &:hover,
+            &:active
+                color: #5A5959
+                padding-bottom: 10px
+                border-bottom: 2px solid #FF8578
+// .container
+.offer-block 
+    position: relative
+    z-index: 1
+    min-height: 400px
+    margin: 20px auto 30px
+
+.offer-block div
+    &:nth-child(even)
+        margin: 50px 0
+  
+.title-offer
+    h1
+        color: white
+        font-size: 4em
+        line-height: 120%
+
+.for-offer
+    p
+        color: white
+        font-size: 1.4em
+        line-height: 150%
+
+// .button-ofer
+.button
+    position: relative
+    z-index: 0
+    background: url('/images/dest/main-button.png') no-repeat
+    background-position: center
+    width: 290px
+    height: 70px
+    border-radius: 15px
+    border: none
+    font-size: 1.5em
+    font-weight: 500
+    cursor: pointer
+    transition: all .3s ease
+    &:hover
+        box-shadow: 0 0 10px #7118b9
+    &:active
+        box-shadow: 0 0 20px #7118b9
+        font-size: 1.6em
+
+
+.header-image
+    position: relative
+    z-index: 0
+    background-size: cover
+    max-width: 100%
+    display: flex
+    img
+        height: 700px
+        margin-bottom: 90px
+        position: relative
+        right: 100px
+
+.text-title
+    // margin-top: 100px
+    margin-bottom: 160px
+    text-align: center
+    font-size: 2rem
+    h2
+        color: #9310FA
+        width: fit-content
+        margin: 0 auto
+        border-bottom: 4px solid #F4675D
+        font-weight: 600
+        padding-bottom: 15px
+        padding-left: 10px
+        padding-right: 10px
+    
+    .vor-text-title
+        font-size: 1.4rem
+        margin: 20px auto 0
+        max-width: calc(var(--index) * 30)     
+        p
+            color: #5D0A9D
+            line-height: 1.4
+
+.card-wrapper
+    height: 100%
+    background: url('/images/dest/Rectangle11.png') no-repeat
+    background-size: contain
+    text-align: center
+    .card-img
+        width: 90%
+        margin: 20px auto 0
+    .card-title
+        padding: 30px 30px 40px  
+        background: url('/images/dest/ellipse.png') no-repeat
+        background-size: cover
+        background-position: center top
+        border-radius: 18px 18px 0 0
+        height: calc(var(--index) * 10)
+        h3
+            position: relative
+            font-family: 'OpenSans-d', sans-serif
+            font-weight: 600
+            font-size: 1.5rem
+            text-align: center
+            line-height: 1.4
+            top: 0
+            color: #4c0a7f
+        button
+            cursor: pointer
+            position: relative
+            top: 20px
+            left: 0//calc(50% - 31.5px)
+            border-radius: 50%
+            background: url('/images/dest/ellipse-button.png') no-repeat
+            background-position: center center
+            border: none
+            width: 63px
+            height: 63px
+            transition: all .3s ease
+            &:hover
+                box-shadow: 0 0 10px #6f42c1
+                img
+                    margin-top: 15px
+            &:active
+                box-shadow: 0 0 20px #6f42c1
+                img
+                    opacity: .7
+            img
+                margin-top: 10px
+.arbeit-row-wrapper
+    flex-flow: row
+.arbeit-colum
+    width: 20%
+    height: 217px
+    background: url('/images/dest/arbeits-card.png') no-repeat
+    &::before
+        content: url('/images/dest/arbeits-arrow.png')
+        position: relative
+        top: 90px
+        right: 90px
