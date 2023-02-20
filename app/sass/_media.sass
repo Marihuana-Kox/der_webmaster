@@ -1,14 +1,77 @@
 /*==========  Desktop First  ==========*/
-
+// >1400px
+@media screen and (max-width: 1400px)
+    .card-wrapper 
+        .card-title 
+            h3
+                font-size: 1.3rem
+                line-height: 1.5
 // ≥1200px
 @media screen and (max-width: 1200px)
-    
+    .burger__meny
+        display: none
+        position: absolute
+        z-index: 0
+        right: 0
+        top: 75px
+        width: 25%
+        background: rgba(75, 1, 195, .8)
+        ul 
+            margin: 40px
+            color: white
+            font-size: 1.5em
+            li 
+                position: relative
+                z-index: 1
+                margin: 30px auto
+                // text-align: right
+                a 
+                    color: white
+
+
+    .burger
+        display: block
+    .for-offer
+        background: url('/images/dest/elipse-blur.png') no-repeat
+        background-size: 100%
+        background-position: center right
+    .card-wrapper 
+        .card-title 
+            height: 37%
+            background-size: 136%
+            h3
+                font-size: 1.2rem
+                line-height: 1.3
+
 // ≥992px
 @media screen and (max-width: 992px)
-    
+    .title-offer
+        background: url('/images/dest/elipse-blur.png') no-repeat
+        background-size: 100%
+        background-position: top right
+    .bg-image-offer
+        background-size: 90%
+    .card-wrapper
+        height: 100%
+        margin-bottom: 30px
+        .card-img
+            top: -15px
+            width: 90%
+            margin: 0 auto
+    .card-wrapper 
+        .card-title 
+            height: 37%
+            background-size: 155%
+            h3
+                font-size: 1rem
+                line-height: 1.4
+    .text-title 
+        .vor-text-title
+            max-width: 90%
 // ≥768px
 @media screen and (max-width: 768px)
-    
+    .title-offer
+        background: none
 // ≥576px
 @media screen and (max-width: 576px)
     
@@ -26,3 +89,7 @@
 // ≤1200px
 @media screen and (min-width: 1200px)
     
+// <1400px
+@media screen and (min-width: 1400px)
+    
+

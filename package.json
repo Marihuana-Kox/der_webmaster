@@ -20,7 +20,7 @@
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.3",
     "sass": "^1.56.2"
   }
 }

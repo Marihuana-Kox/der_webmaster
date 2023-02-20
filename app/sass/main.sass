@@ -1,12 +1,11 @@
 @import clear_css
 @import config
-@import media
 @import fonts
 
 
-body
+body, p
     font-family: 'OpenSans-d', sans-serif
-    font-weight: 500
+    font-weight: 400
 
 h1,h2,h3,h4,h5,h6
     font-family: 'Oswald-d', sans-serif
@@ -28,6 +27,12 @@ header
     margin-top: 100px
 .block-margin-top-200
     margin-top: 200px
+.block-margin-top-350
+    margin-top: 350px
+.block-margin-bottom-100
+    margin-bottom: 100px
+.block-margin-bottom-200
+    margin-bottom: 200px
 .bg-center
     background: #F2E8FA
 .top-border-bg
@@ -68,7 +73,10 @@ header
         &:hover
             width: 180px
             height: 58px
-nav
+.burger__meny
+    li
+        display: block
+.dextop__meny
     li
         display: inline-block
         float: right
@@ -82,12 +90,46 @@ nav
                 color: #5A5959
                 padding-bottom: 10px
                 border-bottom: 2px solid #FF8578
-// .container
+.burger__meny
+
+.burger
+    display: none
+    position: absolute
+    top: 27px
+    right: 30px
+    width: 34px
+    height: 30px
+    cursor: pointer
+    span
+        position: relative
+        transition: all .3s ease
+        display: block
+        width: 100%
+        height: 4px
+        margin: 0 auto 6px
+        background: #1121b7
+        border-radius: 3px
+    &:hover
+        span
+            &:first-child
+                transform: rotate(45deg)
+                width: 90%
+            &:nth-child(even)
+                right: 5px
+            &:last-child
+                transform: rotate(-45deg)
+                width: 90%
+
+.container-offer
+    max-height: 100vh
+.container-not-fone
+    margin: 200px
+
 .offer-block 
     position: relative
     z-index: 1
     min-height: 400px
-    margin: 20px auto 30px
+    margin: 20px auto 130px
 
 .offer-block div
     &:nth-child(even)
@@ -100,6 +142,8 @@ nav
         line-height: 120%
 
 .for-offer
+    position: relative
+    z-index: 1
     p
         color: white
         font-size: 1.4em
@@ -124,22 +168,18 @@ nav
     &:active
         box-shadow: 0 0 20px #7118b9
         font-size: 1.6em
-
-
-.header-image
+.bg-image-offer
     position: relative
     z-index: 0
-    background-size: cover
+    background: url('/images/dest/Artboard-2.png') no-repeat
+    background-size: 50%
+    background-position: 100% 100%
+
+.header-image
     max-width: 100%
-    display: flex
-    img
-        height: 700px
-        margin-bottom: 90px
-        position: relative
-        right: 100px
+    height: 100%
 
 .text-title
-    // margin-top: 100px
     margin-bottom: 160px
     text-align: center
     font-size: 2rem
@@ -156,65 +196,116 @@ nav
     .vor-text-title
         font-size: 1.4rem
         margin: 20px auto 0
-        max-width: calc(var(--index) * 30)     
+        max-width: 50%
         p
             color: #5D0A9D
             line-height: 1.4
-
 .card-wrapper
     height: 100%
     background: url('/images/dest/Rectangle11.png') no-repeat
-    background-size: contain
+    background-position: center bottom
+    background-size: cover
     text-align: center
+    border-radius: 20px
+    .card-img-wrapper
+        width: 100%
+        margin: 0 auto 25px
     .card-img
-        width: 90%
-        margin: 20px auto 0
+        width: 85%
+        margin: 0 auto
     .card-title
-        padding: 30px 30px 40px  
+        // padding: 20px 20px 40px  
         background: url('/images/dest/ellipse.png') no-repeat
-        background-size: cover
+        background-size: 100%
         background-position: center top
         border-radius: 18px 18px 0 0
-        height: calc(var(--index) * 10)
+        height: 33%
+        padding: 10px 20px
         h3
+            min-height: 100px 
             position: relative
             font-family: 'OpenSans-d', sans-serif
-            font-weight: 600
+            font-weight: 500
             font-size: 1.5rem
             text-align: center
             line-height: 1.4
             top: 0
             color: #4c0a7f
-        button
-            cursor: pointer
-            position: relative
-            top: 20px
-            left: 0//calc(50% - 31.5px)
-            border-radius: 50%
-            background: url('/images/dest/ellipse-button.png') no-repeat
-            background-position: center center
-            border: none
-            width: 63px
-            height: 63px
-            transition: all .3s ease
-            &:hover
-                box-shadow: 0 0 10px #6f42c1
-                img
-                    margin-top: 15px
-            &:active
-                box-shadow: 0 0 20px #6f42c1
-                img
-                    opacity: .7
-            img
-                margin-top: 10px
+            margin: 0 auto 8vh
+button
+    cursor: pointer
+    position: relative
+    top: -65px
+    left: 0
+    border-radius: 50%
+    background: url('/images/dest/ellipse-button.png') no-repeat
+    background-position: center center
+    border: none
+    width: 63px
+    height: 63px
+    transition: all .3s ease
+    &:hover
+        box-shadow: 0 0 10px #6f42c1
+        img
+            margin-top: 15px
+    &:active
+        box-shadow: 0 0 20px #6f42c1
+        img
+            opacity: .7
+    img
+        margin-top: 10px
+
 .arbeit-row-wrapper
     flex-flow: row
 .arbeit-colum
+    display: block
     width: 20%
-    height: 217px
-    background: url('/images/dest/arbeits-card.png') no-repeat
-    &::before
+    height: auto
+    margin: 0 auto
+    &::after
         content: url('/images/dest/arbeits-arrow.png')
         position: relative
-        top: 90px
-        right: 90px
+        top: -120px
+        right: 46px
+    &:first-child
+        &::after
+            display: none
+.arbeit-card-wrapper
+    width: 70%
+    min-height: 85%
+    padding-top: 5px
+    margin: 0 auto
+    background: #9310FA
+    border-radius: 8px
+
+.arneit-svg-icon
+    max-width: 90%
+    max-height: 90%
+
+.arbeit-colum
+    .arbeit-icon
+        margin: 0 5px
+        padding: 5px
+        background: url(/images/dest/png-icons/rectangle.png) no-repeat
+        background-size: cover
+        background-position: center
+        border-radius: 6px
+        text-align: center
+        &::after
+            content: url('/images/dest/SVG_icon/line.svg')
+            position: relative
+            top: 0
+            left: 0
+        
+.arbeit-text
+    color: #fefeff
+    width: 100%
+    font-size: .76rem
+    padding: 6px 5px 8px
+    text-align: center
+    line-height: 135%
+    margin-top: 10px
+    border-top: 3px solid white
+    margin: 5px auto
+
+@import media
